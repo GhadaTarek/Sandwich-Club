@@ -81,7 +81,7 @@ public class DetailActivity extends AppCompatActivity {
         String output2="";
         List<String> ingList=sandwich.getIngredients();
         for(String s:ingList){
-            output2+=s;
+            output2+=s+", ";
         }
         ingredients.setText( output2 );
          
