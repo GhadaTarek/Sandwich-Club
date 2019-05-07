@@ -36,11 +36,14 @@ public class JsonUtils {
                 for (int i = 0; i < alsoKnownAs.length(); i++) {
                     list.add( alsoKnownAs.getString( i ) );
                 }
-                placeOfOrigin = jsonObject.getString( "placeOfOrigin" );
+            // placeOfOrigin = jsonObject.getString( "placeOfOrigin" );
+                placeOfOrigin = jsonObject.optString( "placeOfOrigin","fall_back_String" );
 
-                description = jsonObject.getString( "description" );
+            //description = jsonObject.getString( "description" );
+                description = jsonObject.optString( "description","fall_back_String" );
 
-                image = jsonObject.getString( "image" );
+               // image = jsonObject.getString( "image" );
+                image = jsonObject.optString( "image","fall_back_String" );
 
                 ingredients = jsonObject.getJSONArray( "ingredients" );
                 ArrayList <String> ingredient = new ArrayList <>();
